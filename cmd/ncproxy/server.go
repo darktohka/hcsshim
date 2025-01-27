@@ -19,7 +19,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	bolt "go.etcd.io/bbolt"
-	"go.opencensus.io/plugin/ocgrpc"
+	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"google.golang.org/grpc"
 )
 
@@ -54,7 +54,7 @@ func newServer(ctx context.Context, conf *config, dbPath string) (*server, error
 		return nil, err
 	}
 	return &server{
-		grpc:              grpc.NewServer(grpc.StatsHandler(&ocgrpc.ServerHandler{})),
+		grpc:              grpc.NewServer(grpc.StatsHandler(&otelgrpc.ServerHandler{})),
 		ttrpc:             ttrpcServer,
 		conf:              conf,
 		agentStore:        agentStore,

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/Microsoft/hcsshim/internal/log"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 )
 
 var DefaultSampler = trace.AlwaysSample()
@@ -20,14 +20,14 @@ func SetSpanStatus(span *trace.Span, err error) {
 	span.SetStatus(status)
 }
 
-// StartSpan wraps "go.opencensus.io/trace".StartSpan, but, if the span is sampling,
+// StartSpan wraps "go.opentelemetry.io/otel/trace".StartSpan, but, if the span is sampling,
 // adds a log entry to the context that points to the newly created span.
 func StartSpan(ctx context.Context, name string, o ...trace.StartOption) (context.Context, *trace.Span) {
 	ctx, s := trace.StartSpan(ctx, name, o...)
 	return update(ctx, s)
 }
 
-// StartSpanWithRemoteParent wraps "go.opencensus.io/trace".StartSpanWithRemoteParent.
+// StartSpanWithRemoteParent wraps "go.opentelemetry.io/otel/trace".StartSpanWithRemoteParent.
 //
 // See StartSpan for more information.
 func StartSpanWithRemoteParent(ctx context.Context, name string, parent trace.SpanContext, o ...trace.StartOption) (context.Context, *trace.Span) {

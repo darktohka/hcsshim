@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/sys/unix"
 
 	"github.com/Microsoft/hcsshim/ext4/dmverity"

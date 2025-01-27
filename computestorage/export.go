@@ -8,7 +8,7 @@ import (
 
 	"github.com/Microsoft/hcsshim/internal/oc"
 	"github.com/pkg/errors"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 )
 
 // ExportLayer exports a container layer.

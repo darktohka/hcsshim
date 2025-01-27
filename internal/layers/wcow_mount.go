@@ -12,7 +12,7 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/sys/windows"
 
 	"github.com/Microsoft/hcsshim/computestorage"

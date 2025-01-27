@@ -14,7 +14,7 @@ import (
 	"github.com/Microsoft/hcsshim/internal/oc"
 	cimfs "github.com/Microsoft/hcsshim/pkg/cimfs"
 	"github.com/sirupsen/logrus"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 )
 
 var cimMountNamespace guid.GUID = guid.GUID{Data1: 0x6827367b, Data2: 0xc388, Data3: 0x4e9b, Data4: [8]byte{0x96, 0x1c, 0x6d, 0x2c, 0x93, 0x6c}}

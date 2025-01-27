@@ -13,7 +13,7 @@ import (
 
 	cgroups "github.com/containerd/cgroups/v3/cgroup1"
 	"github.com/sirupsen/logrus"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/sys/unix"
 
 	"github.com/Microsoft/hcsshim/internal/guest/runtime"

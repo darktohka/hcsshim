@@ -9,7 +9,7 @@ import (
 	"github.com/Microsoft/hcsshim/internal/oc"
 	"github.com/containerd/containerd/namespaces"
 	shim "github.com/containerd/containerd/runtime/v2/shim"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 )
 
 type publisher interface {

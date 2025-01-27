@@ -18,8 +18,7 @@ import (
 	"github.com/Microsoft/go-winio"
 	"github.com/Microsoft/go-winio/pkg/guid"
 	"github.com/sirupsen/logrus"
-	"go.opencensus.io/trace"
-	"go.opencensus.io/trace/tracestate"
+	"go.opentelemetry.io/otel/trace"
 
 	"github.com/Microsoft/hcsshim/internal/oc"
 )

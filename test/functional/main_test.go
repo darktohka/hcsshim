@@ -24,7 +24,7 @@ import (
 	"github.com/containerd/containerd/namespaces"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli/v2"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 
 	"github.com/Microsoft/hcsshim/internal/layers"
 	"github.com/Microsoft/hcsshim/internal/log"

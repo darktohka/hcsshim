@@ -9,7 +9,7 @@ import (
 
 	"github.com/Microsoft/hcsshim/internal/oc"
 	"github.com/Microsoft/hcsshim/internal/winapi"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 )
 
 // CopyFile is a utility for copying a file using CopyFileW win32 API for

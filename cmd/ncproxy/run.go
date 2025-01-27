@@ -19,8 +19,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
-	"go.opencensus.io/plugin/ocgrpc"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
+	"go.opentelemetry.io/otel/trace"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials/insecure"
@@ -226,7 +226,7 @@ func run(clicontext *cli.Context) error {
 		dialCtx := ctx
 		opts := []grpc.DialOption{
 			grpc.WithTransportCredentials(insecure.NewCredentials()),
-			grpc.WithStatsHandler(&ocgrpc.ClientHandler{}),
+			grpc.WithStatsHandler(&otelgrpc.ClientHandler{}),
 		}
 		if conf.Timeout > 0 {
 			var cancel context.CancelFunc

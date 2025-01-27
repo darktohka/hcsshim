@@ -8,7 +8,7 @@ import (
 
 	"github.com/Microsoft/hcsshim/internal/oc"
 	"github.com/pkg/errors"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 )
 
 // InitializeWritableLayer initializes a writable layer for a container.

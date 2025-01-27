@@ -13,7 +13,7 @@ import (
 
 	task "github.com/containerd/containerd/api/runtime/task/v2"
 	errdefs "github.com/containerd/errdefs/pkg/errgrpc"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 	"google.golang.org/protobuf/types/known/emptypb"
 
 	"github.com/Microsoft/hcsshim/internal/extendedtask"

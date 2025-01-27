@@ -21,7 +21,7 @@ import (
 	typeurl "github.com/containerd/typeurl/v2"
 	"github.com/opencontainers/runtime-spec/specs-go"
 	"github.com/pkg/errors"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 )
 
 // newWcowPodSandboxTask creates a fake WCOW task with a fake WCOW `init`

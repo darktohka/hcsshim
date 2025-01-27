@@ -13,7 +13,7 @@ import (
 	"github.com/opencontainers/runc/libcontainer/devices"
 	oci "github.com/opencontainers/runtime-spec/specs-go"
 	"github.com/pkg/errors"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/sys/unix"
 
 	specInternal "github.com/Microsoft/hcsshim/internal/guest/spec"

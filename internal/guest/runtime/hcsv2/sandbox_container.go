@@ -11,7 +11,7 @@ import (
 
 	oci "github.com/opencontainers/runtime-spec/specs-go"
 	"github.com/pkg/errors"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 
 	"github.com/Microsoft/hcsshim/internal/guest/network"
 	specInternal "github.com/Microsoft/hcsshim/internal/guest/spec"

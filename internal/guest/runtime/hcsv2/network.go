@@ -12,7 +12,7 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/vishvananda/netns"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 
 	"github.com/Microsoft/hcsshim/internal/guest/gcserr"
 	"github.com/Microsoft/hcsshim/internal/guest/network"

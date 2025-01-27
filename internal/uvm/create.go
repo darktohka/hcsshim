@@ -12,7 +12,7 @@ import (
 
 	"github.com/Microsoft/go-winio/pkg/guid"
 	"github.com/sirupsen/logrus"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/sys/windows"
 
 	"github.com/Microsoft/hcsshim/internal/cow"

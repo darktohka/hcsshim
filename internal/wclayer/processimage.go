@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/Microsoft/hcsshim/internal/oc"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 )
 
 // ProcessBaseLayer post-processes a base layer that has had its files extracted.

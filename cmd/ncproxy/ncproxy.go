@@ -12,7 +12,7 @@ import (
 	"github.com/containerd/ttrpc"
 	typeurl "github.com/containerd/typeurl/v2"
 	"github.com/pkg/errors"
-	"go.opencensus.io/trace"
+	"go.opentelemetry.io/otel/trace"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
